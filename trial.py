@@ -119,7 +119,7 @@ def lambda_handler(event, context):
             subject = ("Today's birthday list")
             body = "Test body from lambda" + json.dumps(ans)
             message = {"Subject": {"Data": subject}, "Body": {"Html": {"Data": body}}}
-            response = client.send_email(Source="officialkedark1@gmail.com", Destination={"ToAddresses": ["officialkedark1@gmail.com"]}, Message=message)
+            response = client.send_email(Source="sagar122134@gmail.com", Destination={"ToAddresses": ["sagar122134@gmail.com"]}, Message=message)
 
             response2 = buildResponse(200, f"Lambda executed successfully  {json.dumps(ans)} & {json.dumps(response)}")
             return response2
